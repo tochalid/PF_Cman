@@ -8,33 +8,29 @@ Improvements where made to:
 - src/particle_filter.cpp
 - src/particle_filter.h
 
-In particle_filter.cpp, __initialized__ the UKF and implemented the process model in __ProcessMeasurement()__ function. Prepared matrices and vectors in function __Prediction()__ for __augmented sigma points__, __sigma point prediction__ and __prediction of mean and covariance__. Updated the filter calling related update functions __UpdateLidar()__ and __UpdateRadar()__, each calling __UpdateUKF()__ also calculating and writing NIS to file __"NIS_data_file.cvs"__.
-In ukf.h completed parameter and function declarations.
-In tools.cpp, filled the functions that calculate root mean squared error __"RMSE"__.
+> "Algrithm Flowchart"
+![Image1](./flowchart.png)
 
-Objective is implementing a particle filter algorithm in C++ to solve a localization problem of a moving object of interest with noisy radar measurements and landmarks from an existing static map. Besides the particle filter algorithm this requires implementing sampling from Gaussion distribution, Nearest Neighbor, Root Mean Squared Error, Homogenous Transformation of coordinates and Multivariate-Gaussian probability density.
+> "Pseudodcode"
+![Image1](./pseudocode.png)
+
+In particle_filter.cpp steps shown in IMAGE:"Algorithm Flowchart" are implemented in functions: __init(), prediction(), dataAssociation(), updateWeights(), resample()__ and __SetAssociations()__. Besides the particle filter algorithm desribed in IMAGE:"Pseudocode" this requires implementing sampling from Gaussion distribution, Nearest Neighbor, Root Mean Squared Error, Homogenous Transformation of coordinates and Multivariate-Gaussian probability density.
+
+Objective is implementing a 2 dimensional particle filter algorithm in C++ to solve a localization problem of a moving object of interest with noisy measurements and landmarks from an existing static map. 
+
 Passing the project requires obtaining RMSE values that are lower than the tolerance outlined in the project rubric, 
-pls see https://review.udacity.com/#!/rubrics/783/view
+pls see https://review.udacity.com/#!/rubrics/747/view
 
 This project involves the Term 2 Simulator which can be downloaded here: https://github.com/udacity/self-driving-car-sim/releases. A server package uWebSocketIO is setting up a connection from the C++ program to the simulator, which acts as the host.
 
 ## Running the project
-> Basic Build Instructions
-1. Clone this repo.
-2. Make a build directory: mkdir build && cd build
-3. Compile: cmake .. && make
-4. Run it: ./UnscentedKF
+> Basic Build Instructions: Run shell-scripts from the project directory
+1. ./clean.sh
+2. ./build.sh
+3. ./run.sh
 5. Run and start the simulator
 
 ## Results
-Lidar measurements are red circles, radar measurements are blue circles with an arrow pointing in the direction of the observed angle, and estimation markers are green triangles.
-
-
-
-> The results Dataset 1 are:
+> RMSE is in expected limits.
 
 ![Image1](./ScreenshotDS1_a03y02.png)
-
-The NIS consistency check indicates healthy filter parameters
-
-![Image1.1](./NIS_consistency_a03y02.png)
