@@ -21,8 +21,7 @@ Besides the algorithm desribed in "Pseudocode" this requires implementing sampli
 
 ![Image2](./pseudocode.png)
 
-Passing the project requires obtaining RMSE values that are lower than the tolerance outlined in the project rubric, 
-pls see https://review.udacity.com/#!/rubrics/747/view
+Passing the project requires obtaining RMSE values that are lower than the tolerance tested by the simulator, pls see project rubric https://review.udacity.com/#!/rubrics/747/view.
 
 This project involves the Term 2 Simulator which can be downloaded here: https://github.com/udacity/self-driving-car-sim/releases. A server package uWebSocketIO is setting up a connection from the C++ program to the simulator, which acts as the host.
 
