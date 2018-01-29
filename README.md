@@ -10,8 +10,12 @@ Improvements where made to:
 - src/particle_filter.cpp
 - src/particle_filter.h
 
-In particle_filter.cpp the steps shown in "Algorithm Flowchart" are implemented in functions: __init(), prediction(), dataAssociation(), updateWeights(), resample()__ and __SetAssociations()__. 
-
+In particle_filter.cpp the 4 (green) steps shown in "Algorithm Flowchart" are implemented in functions: 
+__1. init()
+2. prediction()
+3. updateWeights() incl. helper functions: dataAssociation() and SetAssociations()
+4. resample()__
+ 
 > "Algrithm Flowchart"
 
 ![Image1](./flowchart.png)
@@ -26,7 +30,7 @@ Passing the project requires obtaining RMSE values that are lower than the toler
 This project involves the Term 2 Simulator which can be downloaded here: https://github.com/udacity/self-driving-car-sim/releases. A server package uWebSocketIO is setting up a connection from the C++ program to the simulator, which acts as the host.
 
 ## Running the project
-> Basic Build Instructions: Run shell-scripts from the project directory
+> Basic Build Instructions: Download the repo and run shell-scripts from the project directory
 1. ./clean.sh
 2. ./build.sh
 3. ./run.sh
