@@ -37,6 +37,6 @@ This project involves the Term 2 Simulator which can be downloaded here: https:/
 5. Run and start the simulator
 
 ## Results
-> RMSE is in expected limits.
+> RMSE is within expected limits and the test run completed in less than 100 sec. 
 
 ![Image3](./results100.png)
