@@ -1,19 +1,18 @@
-# UKF_Cman
-# Submission for Term2 Project 2: Unscented Kalman Filters
+# PF_Cman
+# Submission for Term2 Project 3: Particle Filter - "Kidnapped Vehicle" Localization
 
 >Environment setup, algorithm docu and boilerplate code provided by Udacity 
-under https://github.com/udacity/CarND-Unscented-Kalman-Filter-Project. 
+under https://github.com/udacity/CarND-Kidnapped-Vehicle-Project. 
 Improvements where made to:
 
-- src/ukf.cpp
-- src/ukf.h
-- src/tools.cpp
+- src/particle_filter.cpp
+- src/particle_filter.h
 
-In ukf.cpp, __initialized__ the UKF and implemented the process model in __ProcessMeasurement()__ function. Prepared matrices and vectors in function __Prediction()__ for __augmented sigma points__, __sigma point prediction__ and __prediction of mean and covariance__. Updated the filter calling related update functions __UpdateLidar()__ and __UpdateRadar()__, each calling __UpdateUKF()__ also calculating and writing NIS to file __"NIS_data_file.cvs"__.
+In particle_filter.cpp, __initialized__ the UKF and implemented the process model in __ProcessMeasurement()__ function. Prepared matrices and vectors in function __Prediction()__ for __augmented sigma points__, __sigma point prediction__ and __prediction of mean and covariance__. Updated the filter calling related update functions __UpdateLidar()__ and __UpdateRadar()__, each calling __UpdateUKF()__ also calculating and writing NIS to file __"NIS_data_file.cvs"__.
 In ukf.h completed parameter and function declarations.
 In tools.cpp, filled the functions that calculate root mean squared error __"RMSE"__.
 
-Objective is implementing an unscented Kalman filter in C++ to estimate the state of a moving object of interest with noisy lidar and radar measurements. This requires implementing non-linear CTRV model equations in __"Basics Unscented Transformation"__.
+Objective is implementing a particle filter algorithm in C++ to solve a localization problem of a moving object of interest with noisy radar measurements and landmarks from an existing static map. Besides the particle filter algorithm this requires implementing sampling from Gaussion distribution, Nearest Neighbor, Root Mean Squared Error, Homogenous Transformation of coordinates and Multivariate-Gaussian probability density.
 Passing the project requires obtaining RMSE values that are lower than the tolerance outlined in the project rubric, 
 pls see https://review.udacity.com/#!/rubrics/783/view
 
