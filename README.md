@@ -11,10 +11,10 @@ Improvements where made to:
 - src/particle_filter.h
 
 In particle_filter.cpp the 4 (green) steps shown in "Algorithm Flowchart" are implemented in functions: 
-__1. init()
-2. prediction()
-3. updateWeights() incl. helper functions: dataAssociation() and SetAssociations()
-4. resample()__
+1. __init()__
+2. __prediction()__
+3. __updateWeights() incl. helper functions: dataAssociation() and SetAssociations()__
+4. __resample()__
  
 > "Algrithm Flowchart"
 
